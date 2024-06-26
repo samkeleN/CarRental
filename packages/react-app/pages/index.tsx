@@ -1,8 +1,8 @@
 import PrimaryButton from "@/components/Button";
 import { useEffect, useState } from "react";
 import { useWeb3 } from "@/contexts/useWeb3";
-import Image from "next/image";
-import { useAccount } from "wagmi";
+import Cars from '@/components/images';
+import ImgSectionOne from '@/images/background/sectionOne.jpeg';
 
 export default function Home() {
     const {
@@ -35,26 +35,26 @@ export default function Home() {
 
     async function sendingCUSD() {
         if (address) {
-            setSigningLoading(true);
+            setCUSDLoading(true);
             try {
                 const tx = await sendCUSD(address, "0.1");
                 setTx(tx);
             } catch (error) {
                 console.log(error);
             } finally {
-                setSigningLoading(false);
+                setCUSDLoading(false);
             }
         }
     }
 
     async function signMessage() {
-        setCUSDLoading(true);
+        setSigningLoading(true);
         try {
             await signTransaction();
         } catch (error) {
             console.log(error);
         } finally {
-            setCUSDLoading(false);
+            setSigningLoading(false);
         }
     }
 
@@ -69,86 +69,33 @@ export default function Home() {
         }
     }
 
-return (
-        <div className="flex flex-col justify-center items-center">
-            {!address && (
-                <div className="h1">Please install Metamask and connect.</div>
-            )}
-            {address && (
-                <div className="h1">
-                    There you go... a canvas for your next Minipay project!
+    return (
+        <div className="home">
+            <div className="section-one">
+                    <div className="container-one">
+                    <h1>BOOK A CAR WITH US</h1>
+                    <h2>Quick & easy car rental with Celo, offering seamless booking, 
+                        affordable rates, and a wide selection of vehicles to meet all your travel needs
+                    </h2>
                 </div>
-            )}
-
-            {address && (
-                <>
-                    <div className="h2 text-center">
-                        Your address:{" "}
-                        <span className="font-bold text-sm">{address}</span>
-                    </div>
-                    {tx && (
-                        <p className="font-bold mt-4">
-                            Tx Completed:{" "}
-                            {(tx.transactionHash as string).substring(0, 6)}
-                            ...
-                            {(tx.transactionHash as string).substring(
-                                tx.transactionHash.length - 6,
-                                tx.transactionHash.length
-                            )}
-                        </p>
-                    )}
-                    <div className="w-full px-3 mt-7">
-                        <PrimaryButton
-                            loading={signingLoading}
-                            onClick={sendingCUSD}
-                            title="Send 0.1 cUSD to your own address"
-                            widthFull
-                        />
-                    </div>
-
-                    <div className="w-full px-3 mt-6">
-                        <PrimaryButton
-                            loading={cUSDLoading}
-                            onClick={signMessage}
-                            title="Sign a Message"
-                            widthFull
-                        />
-                    </div>
-
-                    {userOwnedNFTs.length > 0 ? (
-                        <div className="flex flex-col items-center justify-center w-full mt-7">
-                            <p className="font-bold">My NFTs</p>
-                            <div className="w-full grid grid-cols-2 gap-3 mt-3 px-2">
-                                {userOwnedNFTs.map((tokenURI, index) => (
-                                    <div
-                                        key={index}
-                                        className="p-2 border-[3px] border-colors-secondary rounded-xl"
-                                    >
-                                        <Image
-                                            alt="MINIPAY NFT"
-                                            src={tokenURI}
-                                            className="w-[160px] h-[200px] object-cover"
-                                            width={160}
-                                            height={200}
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    ) : (
-                        <div className="mt-5">You do not have any NFTs yet</div>
-                    )}
-
-                    <div className="w-full px-3 mt-5">
-                        <PrimaryButton
-                            loading={nftLoading}
-                            onClick={mintNFT}
-                            title="Mint Minipay NFT"
-                            widthFull
-                        />
-                    </div>
-                </>
-            )}
+            </div>
+            
+            <div className="section-two">
+                <div className="container-two">
+                    <h1>UNLOCK BENEFITS AND REWARDS</h1>
+                    <p className="paragraph">Quick & easy car rental with Celo, offering seamless booking, 
+                        affordable rates, and a wide selection of vehicles to meet all your travel needs. 
+                        Join our loyalty program and save! As a Piston Car Rental member, you can earn points and spend them on future rentals.
+                    </p>
+            </div>
+                {/* <div className="why-us">
+                    <h1>Why choose us?</h1>
+                    <h3>Best valued deals you will ever find</h3>
+                    <p className="paragraph">We offer the best services in the industry. 
+                        Our vehicles are well maintained and our prices are unbeatable.
+                    </p>
+                </div> */}
+            </div>
         </div>
     );
 }
