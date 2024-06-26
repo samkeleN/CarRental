@@ -1,7 +1,7 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import Image from "next/image";
+import logo from "@/public/logo.png";
 import { useEffect, useState } from "react";
 import { useConnect } from "wagmi";
 import { injected } from "wagmi/connectors";
@@ -43,13 +43,11 @@ export default function Header() {
                                 </Disclosure.Button>
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                <div className="flex flex-shrink-0 items-center">
-                                    <Image
-                                        className="block h-8 w-auto sm:block lg:block"
-                                        src="/logo.svg"
-                                        width="24"
-                                        height="24"
-                                        alt="Celo Logo"
+                                <div className="flex-shrink-0">
+                                    <img
+                                        className="block h-12 w-auto" // Adjusted class to h-12 (or any other suitable size)
+                                        src={logo.src}
+                                        alt="Prosperity"
                                     />
                                 </div>
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
