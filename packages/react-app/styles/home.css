@@ -2,108 +2,164 @@
     width: 100%;
     height: 100%;
     margin-top: -40px;
-    /*border: 2px solid black;*/
     margin-right: auto;
     margin-left: auto;
 }
+
 .section-one {
     width: 100%;
     height: 500px;
-    margin-top: -84px;
-    background-image: url('../images/background/sectionOne.jpeg');
-    background-size:auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-one h1 {
-    position: relative;
     font-size: 30px;
     font-weight: bold;
-    /* border: 2px solid black; */
-    color:brown;
-    margin-top: 20px; 
-    margin-bottom: auto;  
+    color: brown;
+    margin-bottom: 20px;
 }
 
 .section-one h2 {
-    /* border: 2px solid black; */
     font-size: 20px;
     font-weight: bold;
-    margin-right: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    color: whitesmoke;
-}
-
-.container-one {
-    position:relative;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    color: black;
+    margin: 0 10px;
 }
 
 .section-two {
     width: 100%;
-    height: 500px;
-    background-size:auto;
+    height: 500px; /* Adjust height as needed */
+    background-image: url('../images/background/sectionOne.jpeg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0; /* Adjust padding as needed */
 }
 
 .container-two {
-    position:relative;
-    margin-right: auto;
-    margin-left: auto;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    width: 80%;
+    margin: 0 auto;
 }
 
 .container-two h1 {
-    position: relative;
     font-size: 30px;
     font-weight: bold;
-    /* border: 2px solid black; */
-    color:brown;
-    margin-top: 20px; 
-    margin-bottom: auto;  
+    color: brown;
+    margin-bottom: 20px;
 }
 
 .container-two p {
-    /* border: 2px solid black; */
     font-size: 20px;
     font-weight: bold;
-    margin-right: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    color: black;
+    color: white;
+    margin: 0 10px;
 }
 
-
-
-
-
-
-
-
-/*******************************************/
-.vehicle-images {
-    width: 90%;
-    height: 90%;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.vehicle-images img {
+.section-three {
     width: 100%;
-    height: 100%;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.section-three h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: brown;
+    margin-bottom: 20px;
+}
+
+.section-three p {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin: 0 10px;
+}
+
+.car-offers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.car-item {
+    text-align: center;
+}
+
+.car-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.car-item button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.car-item button:hover {
+    background-color: #0056b3;
+}
+.section-four {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.container-three {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container-three h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: brown;
+    margin-bottom: 20px;
+}
+
+.container-three p {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin: 0 10px;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .section-one, .section-two, .section-three {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .section-one h1, .section-one h2, .container-two h1, .container-two p, .section-three h1, .section-three p {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .car-offers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-image {
+        max-width: 80%;
+    }
+
+    .car-item button {
+        padding: 8px 15px;
+    }
 }

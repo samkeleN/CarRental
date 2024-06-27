@@ -1,8 +1,11 @@
 import PrimaryButton from "@/components/Button";
 import { useEffect, useState } from "react";
 import { useWeb3 } from "@/contexts/useWeb3";
-import Cars from '@/components/images';
 import ImgSectionOne from '@/images/background/sectionOne.jpeg';
+import HatchbackImage from '@/images/hatchback.png';
+import SedanImage from '@/images/seden.png';
+import BakkieImage from '@/images/bakkie.png';
+import LandRoverImage from '@/images/land-rover.png';
 
 export default function Home() {
     const {
@@ -72,29 +75,49 @@ export default function Home() {
     return (
         <div className="home">
             <div className="section-one">
-                    <div className="container-one">
-                    <h1>BOOK A CAR WITH US</h1>
-                    <h2>Quick & easy car rental with Celo, offering seamless booking, 
-                        affordable rates, and a wide selection of vehicles to meet all your travel needs
-                    </h2>
+                <div className="container-one">
+                    <img className="land-rover-image" src={LandRoverImage.src} alt="Land Rover" />
+                    <h1><strong>Piston Car Rental</strong></h1>
+                    <h2>Experience luxury and adventure with our top-notch Land Rover rentals.</h2>
                 </div>
             </div>
-            
+
             <div className="section-two">
                 <div className="container-two">
+                    <h1>BOOK A CAR WITH US</h1>
+                    <p>Quick & easy car rental with Celo, offering seamless booking, 
+                        affordable rates, and a wide selection of vehicles to meet all your travel needs
+                    </p>
+                </div>
+            </div>
+
+            <div className="section-three">
+                <h1>WHAT DO WE OFFER</h1>
+                <p className="paragraph">We offer a variety of car types to meet all your travel needs. Choose from our selection of hatchbacks, sedans, and bakkies. Each car is well-maintained and ready to provide a comfortable and reliable ride.</p>
+                <div className="car-offers">
+                    <div className="car-item">
+                        <img className="car-image" src={HatchbackImage.src} alt="Hatchback" />
+                        <button>Rent Hatchback</button>
+                    </div>
+                    <div className="car-item">
+                        <img className="car-image" src={SedanImage.src} alt="Sedan" />
+                        <button>Rent Sedan</button>
+                    </div>
+                    <div className="car-item">
+                        <img className="car-image" src={BakkieImage.src} alt="Bakkie" />
+                        <button>Rent Bakkie</button>
+                    </div>
+                </div>
+            </div>
+
+            <div className="section-four">
+                <div className="container-three">
                     <h1>UNLOCK BENEFITS AND REWARDS</h1>
                     <p className="paragraph">Quick & easy car rental with Celo, offering seamless booking, 
                         affordable rates, and a wide selection of vehicles to meet all your travel needs. 
                         Join our loyalty program and save! As a Piston Car Rental member, you can earn points and spend them on future rentals.
                     </p>
-            </div>
-                {/* <div className="why-us">
-                    <h1>Why choose us?</h1>
-                    <h3>Best valued deals you will ever find</h3>
-                    <p className="paragraph">We offer the best services in the industry. 
-                        Our vehicles are well maintained and our prices are unbeatable.
-                    </p>
-                </div> */}
+                </div>
             </div>
         </div>
     );
