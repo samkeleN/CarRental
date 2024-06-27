@@ -76,7 +76,7 @@ export default function Home() {
         <div className="home">
             <div className="section-one">
                 <div className="container-one">
-                    <img className="land-rover-image" src={LandRoverImage.src} alt="Land Rover" />
+                    
                     <h1><strong>Piston Car Rental</strong></h1>
                     <h2>Experience luxury and adventure with our top-notch Land Rover rentals.</h2>
                 </div>
