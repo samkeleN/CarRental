@@ -1,7 +1,6 @@
 .home {
     width: 100%;
     height: 100%;
-    margin-top: -40px;
     /*border: 2px solid black;*/
     margin-right: auto;
     margin-left: auto;
@@ -15,7 +14,7 @@
     text-align: center;
 }
 
-.section-one h1 {
+.headerOne {
     position: relative;
     font-size: 30px;
     font-weight: bold;
@@ -25,9 +24,19 @@
     margin-bottom: auto;  
 }
 
-.section-one h2 {
+.section-one p {
     /* border: 2px solid black; */
     font-size: 20px;
+    margin-right: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.section-one h2 {
+    /* border: 2px solid black; */
+    font-size: 25px;
     font-weight: bold;
     margin-right: auto;
     margin-left: 10px;
@@ -48,7 +57,7 @@
 
 .section-two {
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-size:auto;
     text-align: center;
     /* border: 2px solid black; */
@@ -58,21 +67,21 @@
     position:relative;
     margin-right: auto;
     margin-left: auto;
-    top: 50%; 
+    top: 40%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
 }
 
-.container-two h1 {
-    position: relative;
-    font-size: 30px;
-    font-weight: bold;
-    /* border: 2px solid black; */
-    color:brown;
-    margin-top: 20px; 
-    margin-bottom: auto;  
-}
 
+.container-two h2{
+    position:relative;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: #448EE4;
+
+}
 .container-two p {
     /* border: 2px solid black; */
     font-size: 20px;
@@ -84,26 +93,57 @@
     color: black;
 }
 
-
-
-
-
-
-
-
-/*******************************************/
-.vehicle-images {
-    width: 90%;
-    height: 90%;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
+.section-three {
+    width: 100%;
+    height: 400px;
+    background-size:auto;
+    text-align: center;
+    /* border: 2px solid black; */
+    background-color: #448EE4;
 }
 
-.vehicle-images img {
-    width: 100%;
-    height: 100%;
-    margin-top: 20px;
+.container-three {
+    position:relative;
     margin-right: auto;
     margin-left: auto;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.container-three h1, h2{
+    position:relative;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.container-three p{
+    position:relative;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    color: white;
+}
+
+.section-four {
+    width: 100%;
+    height: 100px;
+    background-size:auto;
+    text-align: center;
+    /* border: 2px solid black; */
+    background-color: whitesmoke;
+}
+
+.container-four {
+    position:relative;
+    margin-right: auto;
+    margin-left: auto;
+    top: 50%; 
+    left: 50%;
+    font-weight: bold; 
+    font-size: 20px;
+    transform: translate(-50%, -50%); 
 }
